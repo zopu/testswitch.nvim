@@ -19,7 +19,10 @@ end
 function M.setup(opts)
 	opts = opts or {}
 	vim.api.nvim_create_user_command("TestFileSwitch", TestFileSwitch, {})
-	vim.keymap.set("n", "<Leader>t", TestFileSwitch)
+end
+
+function M.switch()
+	TestFileSwitch()
 end
 
 return M
